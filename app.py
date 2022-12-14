@@ -40,6 +40,19 @@ def not_found(error=None):
     
     return resp
 
+@app.errorhandler(405)
+def not_allowed(error=None):
+    message = {
+        
+            'status': 405,
+            'message': 'Method Not Allowed: ' + request.url
+        }
+    
+    resp = jsonify(message)
+    resp.status_code = 405
+    
+    return resp
+
 if __name__ == '__main__':
     create_table()
     app.debug = True
