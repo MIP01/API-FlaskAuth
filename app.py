@@ -54,6 +54,6 @@ def not_allowed(error=None):
     return resp
 
 if __name__ == '__main__':
-    create_table()
+    #create_table()
     app.debug = True
     app.run()
