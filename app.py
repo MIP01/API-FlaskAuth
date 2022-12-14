@@ -53,8 +53,7 @@ def not_allowed(error=None):
     
     return resp
 
-#remove comment if you use local server
-#if __name__ == '__main__':
-    #create_table()
-    #app.debug = True
-    #app.run()
+if __name__ == '__main__':
+    create_table()
+    app.debug = True
+    app.run()
