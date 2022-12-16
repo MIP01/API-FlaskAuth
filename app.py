@@ -7,8 +7,8 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 app.config.from_object('config')
 
-app.register_blueprint(user_bp, url_prefix='/users')
-app.register_blueprint(auth_bp, url_prefix='/auth')
+app.register_blueprint(user_bp, url_prefix='/api/users')
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
 
 @app.route('/')
 def index():
